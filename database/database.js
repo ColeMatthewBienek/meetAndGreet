@@ -19,3 +19,6 @@ db.connect(function(err) {
 
 //db operations
 
+//Validate user
+
+

@@ -1,19 +1,21 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
-
-// export default function App() {
-//   return(
-//     <h1>react-app-template</h1>
-//   )
-// };
+import ReactDOM from "react-dom/client"
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Nav from './nav.js'
+import RouterURL from './routerURL'
+import "./app.css"
 
 const App = () => (
-  <h1>react-app-template</h1>
+  <div className="wrapper">
+    <h1>Meet and Greet</h1>
+    <Router>
+      <div>
+        <RouterURL />
+        <Nav />
+      </div>
+    </Router>
+  </div>
+
 );
 
 export default App;

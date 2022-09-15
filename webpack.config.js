@@ -23,6 +23,13 @@ module.exports = {
             // contains an array containing the loaders we want to use to transform/transpile/compile our files before adding the to the bundle
             use: ['babel-loader'],
           },
+          {
+            test: /\.css$/,
+            use: [
+                { loader: 'style-loader' },
+                { loader: 'css-loader' }
+            ]
+          }
         ],
 
     },
@@ -31,7 +38,7 @@ module.exports = {
     // (as long as the extension is in this list)
     // this property is optional
     resolve: {
-        extensions: ['*', '.js', '.jsx'],
+        extensions: ['*', '.js', '.jsx', '.css'],
     },
 
     // devServer will serve your react static files for testing only
